@@ -1,0 +1,24 @@
+<div class="card card--post" [ngClass]="{'card--post-mini': this.mini, 'mt-0': this.post.id === 2 && this.mini, 'card--post-latest': this.latest}">
+    <div class="card--post-img" *ngIf="showImg">
+        <img [src]="post.img" class="card-img-top" alt="post-img">
+    </div>
+    <div class="card--post-description" [ngClass]="{'ml-1': this.mini || this.latest}">
+        
+        <p class="post--topic" [ngClass]="{'margin-topic': !this.mini && !this.latest}">{{post.topic}}</p>
+        
+        <!-- COMPONENTS--MINI -->
+        <h5 class="card-title fw-bold" *ngIf="this.mini || this.latest">{{post.title}}</h5>
+        <small class="card-text" *ngIf="this.mini || this.latest">{{post.description}}</small>
+        <!-- COMPONENTS--MINI -->
+
+        <h1 class="card-title fw-800" *ngIf="!this.mini && !this.latest">{{post.title}}</h1>
+        <p class="card-text post--description" *ngIf="!this.mini && !this.latest">{{post.description}}</p>
+
+        <div class="post--footer" [ngClass]="{'flex-column': this.mini || this.latest}">
+            <small class="fw-bold">{{post.name_authors}}</small> 
+            <small class="footer--description" [ngClass]="{'ml-1': !this.mini && !this.latest}">{{post.date}}</small>
+        </div>
+        
+    </div>
+</div>
+<hr *ngIf="this.mini"/>

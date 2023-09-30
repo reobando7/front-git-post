@@ -1,0 +1,82 @@
+p {
+  margin-bottom: 0;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+.card {
+  border: none;
+}
+
+.card--post {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  grid-template-areas: "img"
+    "description";
+
+}
+
+.card-text {
+  color: #57606A !important;
+}
+
+.card--post-mini {
+  grid-template: 1fr / 40% 1fr;
+  grid-template-areas: "img description";
+  margin-top: 1rem;
+
+  img {
+    width: 80%;
+  }
+}
+
+.card--post-latest {
+  grid-template: 1fr;
+  grid-template-areas: "description";
+  margin-top: 1rem;
+}
+
+
+.card--post-img {
+  grid-area: "img";
+}
+
+.card--post-description {
+  grid-area: "description";
+}
+
+.card--margins {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.footer--description {
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.post--topic {
+  background: -webkit-linear-gradient(-70deg, #8250df 0%, #d42a32 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.post--footer {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.post--description {
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.margin-topic {
+  margin-top: 1.5rem !important;
+  margin-bottom: .5rem !important;
+}

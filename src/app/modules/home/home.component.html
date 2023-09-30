@@ -1,0 +1,26 @@
+<div class="container-fluid home--container" *ngIf="!loading">
+    <app-header></app-header>
+    <div class="row mt-5 ml-4">
+        <div class="col-md-6">
+            <app-post [post]="potrait" [mini]="false" [showImg]="true"></app-post>
+        </div>
+        <div class="col-md-5 ml-1">
+            <app-post *ngFor="let item of list_post_potrait" [post]="item" [mini]="true" [showImg]="true"></app-post>
+        </div>
+    </div>
+    <div class="row mr-4 ml-4">
+        <div class="col-md-6" *ngFor="let item of footer_post_potrait">
+            <hr />
+            <app-post [post]="item" [mini]="false" [showImg]="true"></app-post>
+        </div>
+    </div>
+    <div class="row home-border--latest ml-4 mr-4">
+        <h5 class="fw-bold pl-0 mt-2 mb-2">Latest posts</h5>
+        <hr />
+        <div class="row mrow-invert">
+            <div class="col-md-3" *ngFor="let item of latest_post;index as i" [ngClass]="{'ml-0': i == 0}">
+                <app-post [post]="item" [mini]="false" [showImg]="false" [latest]="true"></app-post>
+            </div>
+        </div>
+    </div>
+</div>
