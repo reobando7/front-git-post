@@ -1,3 +1,3 @@
 export const environment = {
-    URL: 'http://localhost:3000'
+    URL: 'https://rich-frock-jay.cyclic.cloud'
 };

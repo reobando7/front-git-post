@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit{
     this.loading = true;
     this.gitService.getPost().subscribe({
       next: (data:any) => {
-        console.log(data);
         this.loading = false;
         if(data.status === 200){
           const posts = data.data;
@@ -31,7 +30,6 @@ export class HomeComponent implements OnInit{
         }
       },
       error: (error:any) => {
-        console.log(error)
         this.loading = false;
       }
     })

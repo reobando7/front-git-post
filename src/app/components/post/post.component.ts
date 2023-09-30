@@ -6,15 +6,9 @@ import { Post } from 'src/app/core/models/post';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements AfterViewInit {
-  
+export class PostComponent {
   @Input() post !: Post;
   @Input() mini !: boolean;
   @Input() showImg !: boolean;
   @Input() latest !: boolean;
-  
-  ngAfterViewInit(): void {
-    console.log(this.post);
-    console.log(this.mini)
-  }
 }
